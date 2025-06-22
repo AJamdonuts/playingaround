@@ -1,0 +1,150 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(164, 218, 239);
+  font-family: "Cherry Bomb One", system-ui;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Page wrapper with vertical layout */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+/* HEADER ROW: Clouds + Bear at top */
+.header-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5vw;
+  padding-top: 1.5rem;
+}
+
+.main-image {
+  width: 15vw;
+  max-width: 275px;
+}
+
+.cloud {
+  width: 4vw;
+  max-width: 60px;
+  height: auto;
+}
+
+/* NEW – wrapper that lets us layer images */
+.cloud-wrapper {
+  position: relative;   /* establishes a containing block */
+  display: inline-block;
+}
+
+/* keep the existing cloud size rules you already have */
+.cloud-wrapper .cloud {
+  display: block;       /* takes full width of wrapper */
+}
+
+/* Coke can sits on top of the cloud */
+.coke {
+  position: absolute;
+  top: 55%;             /* center vertically */
+  left: 50%;            /* center horizontally */
+  transform: translate(-50%, -50%) scale(0.4) rotate(-20deg); /* fine-tune position & size */
+  height: 60%;        /* or set width instead, whichever looks better */
+  opacity: 0.7;
+  pointer-events: none; /* avoids stealing hover/clicks */
+}
+.chatgpt {
+  position: absolute;
+  top: 57%;             /* center vertically */
+  left: 50%;            /* center horizontally */
+  transform: translate(-50%, -50%) scale(0.6); /* fine-tune position & size */
+  height: 60%;        /* or set width instead, whichever looks better */
+  opacity: 0.7;
+  pointer-events: none; /* avoids stealing hover/clicks */
+}
+
+
+.cloud-left {
+  margin-top: 2vw;
+  width: 60vw;
+  max-width: 300px;
+}
+
+.cloud-lower {
+  margin-top: 1.5vw;
+}
+
+/* MAIN CONTENT: centered vertically below teddy */
+.main-content {
+  flex: 1; /* Takes remaining height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
+
+/* TEXT STYLING */
+h1 {
+  font-size: clamp(10rem, 12vw, 14rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(252, 195, 158);
+  -webkit-text-stroke: 0.3vw rgb(172, 101, 86);
+  text-shadow: 0.1vw 0.2vw 0.5vw rgb(116, 75, 68);
+  margin: 0;
+  line-height: 0.5;
+}
+
+.diagonal-text {
+  display: block;
+  transform: rotate(-4deg);
+}
+
+.word {
+  display: block;
+  transform: rotate(-2deg);
+  margin-left: 2.5ch;
+}
+
+/* BUTTON */
+.btn {
+  padding: clamp(0.8rem, 2vw, 1.5rem) clamp(1.2rem, 4vw, 2.5rem);
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border: clamp(2px, 0.5vw, 4px) solid rgb(252, 195, 158);
+  outline: clamp(4px, 1vw, 6px) rgb(172, 101, 86) solid;
+  border-radius: 80px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10rem;
+}
+
+.btn:hover {
+  background-color: rgb(172, 101, 86);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20vw;
+    -webkit-text-stroke: 1vw rgb(172, 101, 86);
+  }
+
+  .cloud,
+  .main-image {
+    max-width: 80px;
+  }
+  .btn {
+    padding: 5vw 6vw;
+    font-size: 6vw;
+  }
+}

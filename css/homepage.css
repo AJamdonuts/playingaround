@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(164, 218, 239);
+  font-family: "Cherry Bomb One", system-ui;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Layout structure */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.header-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5vw;
+  padding-top: 1.5rem;
+}
+
+/* Reused styles from your first page */
+.cloud {
+  width: 4vw;
+  max-width: 60px;
+  height: auto;
+}
+
+.cloud-lower {
+  margin-top: 1.5vw;
+}
+
+.cloud-left {
+  margin-top: 2vw;
+  width: 60vw;
+  max-width: 300px;
+}
+
+.cloud-with-text {
+  position: relative;
+  display: inline-block;
+}
+
+.cloud-image {
+  margin-top: 2vw;
+  width: 60vw;
+  max-width: 300px;
+}
+
+.cloud-text {
+  position: absolute;
+  top: 50%;  /* center vertically */
+  left: 50%; /* center horizontally */
+  transform: translate(-50%, -60%) rotate(-15deg); /* actual centering */
+  font-family: 'Cherry Bomb One', sans-serif;
+  font-size: 1.4rem;
+  color: rgb(94, 59, 52);
+  text-align: center;
+  padding: 0.5rem;
+  width: 80%; /* control wrapping */
+  text-shadow: 1px 1px white;
+}
+.cloud-text-alt {
+  font-size: 1.9rem; /* smaller than the original */
+  transform: translate(-50%, -70%) rotate(1deg); /* tilted other way */
+  color: rgb(53, 33, 30); /* optional: slightly darker or different */
+}
+
+.main-image {
+  width: 15vw;
+  max-width: 275px;
+}
+
+/* Link row with images + labels */
+.link-row {
+  display: flex;
+  gap: 4rem;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.link-item {
+  text-align: center;
+}
+
+.link-image {
+  width: 50vw;
+  max-width: 400px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(157, 193, 131);
+}
+
+.link-image:hover {
+  transform: scale(1.05);
+}
+
+.image-label {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: rgb(94, 59, 52);
+  text-shadow: 1px 1px 2px white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  z-index: 10;
+}
+
+.footer-image {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+.footer-text {
+  font-size: 1.2rem;
+  color: rgb(94, 59, 52);
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 1px 1px 2px white;
+  text-transform: uppercase;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="../css/mydictionary.css" />
+</head>
+<body>
+    <div class="library-card-header">
+        <h1>Library Card</h1>
+        <div class="card-info">
+            <label for="user-name">Name:</label>
+            <input type="text" id="user-name" placeholder="Enter your name" />
+            <span class="license-label">Licence: <strong id="license-status">Baby</strong></span>
+        </div>
+    </div>
+    <div class="notepad-wrapper">
+        <img src="../images/ -17.png" class="notepad-image" alt="Notepad background" />
+     <div class="table-overlay">
+        <table class="notepad-table">
+        <thead>
+          <tr>
+            <th>Score</th>
+            <th>Word</th>
+            <th>Date</th>
+            <th>Used</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="clickable-row">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="clickable-row">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!-- More rows -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<div class="popup-overlay" id="popup">
+  <div class="popup-content">
+    <!-- Comment Display Area -->
+    <div id="popup-comment-display" class="comment-display">
+      <img src="../images/avatar.png" alt="avatar" />
+      <p id="comment-text-display">No comment yet.</p>
+    </div>
+
+    <!-- Data Display Areas (optional) -->
+    <div id="rating-display"></div>
+    <div id="tally-display"></div>
+
+    <!-- Buttons Row -->
+    <div class="popup-buttons">
+      <button type="button" onclick="openMiniPopup('comment')">Comment</button>
+      <button type="button" onclick="openMiniPopup('rating')">Rating</button>
+      <button type="button" onclick="openMiniPopup('tally')">Tally</button>
+    </div>
+
+    <!-- Close Button -->
+    <div class="popup-buttons">
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Mini Popup -->
+<div class="popup-overlay small" id="mini-popup">
+  <div class="popup-content">
+    <h3 id="mini-title">Add Comment</h3>
+    <form id="mini-form">
+      <textarea id="mini-input" placeholder="Type here..."></textarea>
+      <div class="popup-buttons">
+        <button type="submit">Save</button>
+        <button type="button" onclick="closeMiniPopup()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="../js/library-card.js"></script>
+
+</body>
+</html>
